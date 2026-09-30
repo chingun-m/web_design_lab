@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лаборатори 2 анкет</title>
+  </head>
+  <body>
+    <header>
+      <h1>Анкет</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Нүүр(Лаборатори 1)</a></li>
+          <li><a href="lab2.html">Анкет</a></li>
+          <li><a href="#">Тусламж</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <section>
+          <h2>Анкет бүртгэл</h2>
+          <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="name">Нэр:</label><br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              minlength="2"
+              required
+            /><br />
+            <br />
+            <label for="age">Нас:</label><br />
+            <input type="number" id="age" name="age" required /><br />
+            <br />
+
+            <label for="email">И-мэйл:</label><br />
+            <input type="email" id="email" name="email" required /><br />
+            <br />
+
+            <label for="password">Нууц үг:</label><br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              minlength="8"
+              required
+            /><br />
+            <br />
+
+            <label for="phone">Утасны дугаар:</label><br />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{8}"
+              required
+            /><br />
+            <br />
+
+            <label for="github">Github:</label><br />
+            <input type="url" id="github" name="github" /><br />
+            <br />
+
+            <label for="birthday">Төрсөн огноо:</label><br />
+            <input type="date" id="birthday" name="birthday" required /><br />
+            <br />
+
+            <label for="major">Мэргэжил:</label><br />
+            <select id="major" name="major" required>
+              <option value="">Сонгоно уу</option>
+              <option value="software">Программ хангамж</option>
+              <option value="ai">Хиймэл оюун ухаан</option>
+              <option value="iot">IoT</option>
+              <option value="cs">Компьютерийн ухаан</option>
+              <option value="it">Мэдээллийн технологи</option>
+            </select>
+            <br /><br />
+            <fieldset>
+              <legend>Хүйс:</legend>
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                id="male"
+                required
+              />
+              <label for="male">Эрэгтэй</label>
+              <input type="radio" name="gender" value="female" id="female" />
+              <label for="female">Эмэгтэй</label>
+            </fieldset>
+            <br />
+
+            <fieldset>
+              <legend>Спорт:</legend>
+
+              <input type="checkbox" id="coding" name="hobby" value="coding" />
+              <label for="coding">Код бичих</label><br />
+              <input
+                type="checkbox"
+                id="running"
+                name="hobby"
+                value="running"
+              />
+              <label for="running">Гүйх</label><br />
+              <input type="checkbox" id="gaming" name="hobby" value="gaming" />
+              <label for="gaming">Онлайн тоглоом тоглох</label><br />
+              <input type="checkbox" id="bike" name="hobby" value="bike" />
+              <label for="bike">Дугуй унах</label><br />
+              <input type="checkbox" id="others" name="hobby" value="others" />
+              <label for="others">Бусад</label>
+            </fieldset>
+            <br />
+
+            <fieldset>
+              <legend>Сонирхож буй программын хэл:</legend>
+
+              <input
+                type="checkbox"
+                id="C#"
+                name="programminglanguage"
+                value="C#"
+              />
+              <label for="C#">C#</label><br />
+              <input
+                type="checkbox"
+                id="Java"
+                name="programminglanguage"
+                value="Java"
+              />
+              <label for="Java">Java</label><br />
+              <input
+                type="checkbox"
+                id="JavaScript"
+                name="programminglanguage"
+                value="JavaScript"
+              />
+              <label for="Javascript">JavaScript</label><br />
+              <input
+                type="checkbox"
+                id="Python"
+                name="programminglanguage"
+                value="Python"
+              />
+              <label for="Python">Python</label><br />
+              <input
+                type="checkbox"
+                id="Rust"
+                name="programminglanguage"
+                value="Rust"
+              />
+              <label for="Rust">Rust</label><br />
+              <input
+                type="checkbox"
+                id="C++"
+                name="programminglanguage"
+                value="C++"
+              />
+              <label for="C++">C++</label><br />
+              <input
+                type="checkbox"
+                id="C"
+                name="programminglanguage"
+                value="C"
+              />
+              <label for="C">C</label><br />
+            </fieldset>
+
+            <br />
+
+            <button type="submit">Бүртгүүлэх</button>
+            <button type="reset">Дахин эхлүүлэх</button>
+          </form>
+        </section>
+
+        <section>
+          <h2>Миний сонирхол:</h2>
+          <ul>
+            <li>Хоол хийх</li>
+            <li>Ууланд гарах</li>
+            <li>Скутер унах</li>
+            <li>Шинэ технологийн зүйлсийг турших</li>
+            <li>Программ хийх</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Миний дүн:</h2>
+          <table border="1">
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>Хичээлийн нэр</th>
+                <th>Дүн</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Программчлалын үндэс</td>
+                <td>95</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Өгөгдлийн сангийн систем</td>
+                <td>90</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Математик</td>
+                <td>91</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Объект хандлагат программчлал</td>
+                <td>97</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Программчлалын дадлага</td>
+                <td>98</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Вэб зохиомжийн хичээл.</p>
+    </footer>
+  </body>
+</html>
