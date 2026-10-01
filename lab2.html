@@ -3,81 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Лаборатори 2 анкет</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <header>
-      <h1>Анкет</h1>
+    <header class="site-header">
+      <h1 class="main-title">Анкет</h1>
+
       <nav>
-        <ul>
+        <ul class="nav-list">
           <li><a href="index.html">Нүүр(Лаборатори 1)</a></li>
           <li><a href="lab2.html">Анкет</a></li>
           <li><a href="#">Тусламж</a></li>
         </ul>
       </nav>
     </header>
+
     <main>
       <article>
-        <section>
-          <h2>Анкет бүртгэл</h2>
-          <form action="#" method="POST" enctype="multipart/form-data">
-            <label for="name">Нэр:</label><br />
-            <input
-              type="text"
-              id="name"
-              name="name"
-              minlength="2"
-              required
-            /><br />
-            <br />
-            <label for="age">Нас:</label><br />
-            <input type="number" id="age" name="age" required /><br />
-            <br />
+        <section class="form-section">
+          <h2 class="section-title">Анкет бүртгэл</h2>
 
-            <label for="email">И-мэйл:</label><br />
-            <input type="email" id="email" name="email" required /><br />
-            <br />
+          <form
+            class="registration-form"
+            action="#"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div class="form-field">
+              <label for="name">Нэр:</label>
+              <input type="text" id="name" name="name" minlength="2" required />
+            </div>
 
-            <label for="password">Нууц үг:</label><br />
-            <input
-              type="password"
-              id="password"
-              name="password"
-              minlength="8"
-              required
-            /><br />
-            <br />
+            <div class="form-field">
+              <label for="age">Нас:</label>
+              <input type="number" id="age" name="age" required />
+            </div>
 
-            <label for="phone">Утасны дугаар:</label><br />
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              pattern="[0-9]{8}"
-              required
-            /><br />
-            <br />
+            <div class="form-field">
+              <label for="email">И-мэйл:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
 
-            <label for="github">Github:</label><br />
-            <input type="url" id="github" name="github" /><br />
-            <br />
+            <div class="form-field">
+              <label for="password">Нууц үг:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="8"
+                required
+              />
+            </div>
 
-            <label for="birthday">Төрсөн огноо:</label><br />
-            <input type="date" id="birthday" name="birthday" required /><br />
-            <br />
+            <div class="form-field">
+              <label for="phone">Утасны дугаар:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{8}"
+                required
+              />
+            </div>
 
-            <label for="major">Мэргэжил:</label><br />
-            <select id="major" name="major" required>
-              <option value="">Сонгоно уу</option>
-              <option value="software">Программ хангамж</option>
-              <option value="ai">Хиймэл оюун ухаан</option>
-              <option value="iot">IoT</option>
-              <option value="cs">Компьютерийн ухаан</option>
-              <option value="it">Мэдээллийн технологи</option>
-            </select>
-            <br /><br />
+            <div class="form-field">
+              <label for="github">Github:</label>
+              <input type="url" id="github" name="github" />
+            </div>
+
+            <div class="form-field">
+              <label for="birthday">Төрсөн огноо:</label>
+              <input type="date" id="birthday" name="birthday" required />
+            </div>
+
+            <div class="form-field">
+              <label for="major">Мэргэжил:</label>
+              <select id="major" name="major" required>
+                <option value="">Сонгоно уу</option>
+                <option value="software">Программ хангамж</option>
+                <option value="ai">Хиймэл оюун ухаан</option>
+                <option value="iot">IoT</option>
+                <option value="cs">Компьютерийн ухаан</option>
+                <option value="it">Мэдээллийн технологи</option>
+              </select>
+            </div>
+
             <fieldset>
               <legend>Хүйс:</legend>
+
               <input
                 type="radio"
                 name="gender"
@@ -86,16 +102,17 @@
                 required
               />
               <label for="male">Эрэгтэй</label>
+
               <input type="radio" name="gender" value="female" id="female" />
               <label for="female">Эмэгтэй</label>
             </fieldset>
-            <br />
 
             <fieldset>
               <legend>Спорт:</legend>
 
               <input type="checkbox" id="coding" name="hobby" value="coding" />
               <label for="coding">Код бичих</label><br />
+
               <input
                 type="checkbox"
                 id="running"
@@ -103,25 +120,28 @@
                 value="running"
               />
               <label for="running">Гүйх</label><br />
+
               <input type="checkbox" id="gaming" name="hobby" value="gaming" />
               <label for="gaming">Онлайн тоглоом тоглох</label><br />
+
               <input type="checkbox" id="bike" name="hobby" value="bike" />
               <label for="bike">Дугуй унах</label><br />
+
               <input type="checkbox" id="others" name="hobby" value="others" />
               <label for="others">Бусад</label>
             </fieldset>
-            <br />
 
             <fieldset>
               <legend>Сонирхож буй программын хэл:</legend>
 
               <input
                 type="checkbox"
-                id="C#"
+                id="CSharp"
                 name="programminglanguage"
                 value="C#"
               />
-              <label for="C#">C#</label><br />
+              <label for="CSharp">C#</label><br />
+
               <input
                 type="checkbox"
                 id="Java"
@@ -129,13 +149,15 @@
                 value="Java"
               />
               <label for="Java">Java</label><br />
+
               <input
                 type="checkbox"
                 id="JavaScript"
                 name="programminglanguage"
                 value="JavaScript"
               />
-              <label for="Javascript">JavaScript</label><br />
+              <label for="JavaScript">JavaScript</label><br />
+
               <input
                 type="checkbox"
                 id="Python"
@@ -143,6 +165,7 @@
                 value="Python"
               />
               <label for="Python">Python</label><br />
+
               <input
                 type="checkbox"
                 id="Rust"
@@ -150,13 +173,15 @@
                 value="Rust"
               />
               <label for="Rust">Rust</label><br />
+
               <input
                 type="checkbox"
-                id="C++"
+                id="Cpp"
                 name="programminglanguage"
                 value="C++"
               />
-              <label for="C++">C++</label><br />
+              <label for="Cpp">C++</label><br />
+
               <input
                 type="checkbox"
                 id="C"
@@ -166,16 +191,18 @@
               <label for="C">C</label><br />
             </fieldset>
 
-            <br />
+            <div class="button-group">
+              <button type="submit" class="submit-button">Бүртгүүлэх</button>
 
-            <button type="submit">Бүртгүүлэх</button>
-            <button type="reset">Дахин эхлүүлэх</button>
+              <button type="reset" class="reset-button">Дахин эхлүүлэх</button>
+            </div>
           </form>
         </section>
 
-        <section>
-          <h2>Миний сонирхол:</h2>
-          <ul>
+        <section class="content-section">
+          <h2 class="section-title">Миний сонирхол:</h2>
+
+          <ul class="interest-list">
             <li>Хоол хийх</li>
             <li>Ууланд гарах</li>
             <li>Скутер унах</li>
@@ -184,9 +211,10 @@
           </ul>
         </section>
 
-        <section>
-          <h2>Миний дүн:</h2>
-          <table border="1">
+        <section class="content-section">
+          <h2 class="section-title">Миний дүн:</h2>
+
+          <table class="grades-table">
             <thead>
               <tr>
                 <th>№</th>
@@ -194,27 +222,32 @@
                 <th>Дүн</th>
               </tr>
             </thead>
+
             <tbody>
               <tr>
                 <td>1</td>
                 <td>Программчлалын үндэс</td>
                 <td>95</td>
               </tr>
+
               <tr>
                 <td>2</td>
                 <td>Өгөгдлийн сангийн систем</td>
                 <td>90</td>
               </tr>
+
               <tr>
                 <td>3</td>
                 <td>Математик</td>
                 <td>91</td>
               </tr>
+
               <tr>
                 <td>4</td>
                 <td>Объект хандлагат программчлал</td>
                 <td>97</td>
               </tr>
+
               <tr>
                 <td>5</td>
                 <td>Программчлалын дадлага</td>
@@ -226,8 +259,9 @@
       </article>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p>&copy; 2026 Вэб зохиомжийн хичээл.</p>
     </footer>
   </body>
 </html>
+```
