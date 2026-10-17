@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="mn" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Lab 6</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav-container" aria-label="Үндсэн навигаци">
+        <a href="#" class="logo-link" aria-label="Зургийн Цомог Нүүр хуудас">
+          <svg class="logo-svg" viewBox="0 0 36 36" aria-hidden="true">
+            <image href="img/logo.png" width="36" height="36" />
+          </svg>
+          <span>Зургийн Цомог</span>
+        </a>
+        <div class="nav-actions">
+          <ul class="nav-links">
+            <li><a href="#gallery">Галерей</a></li>
+            <li><a href="#media">Видео</a></li>
+          </ul>
+          <button
+            id="themeToggleBtn"
+            class="theme-toggle-btn"
+            aria-label="Харанхуй горим шилжүүлэх"
+          >
+            <span id="themeText">Dark</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <h1 class="hero-title">Байгаль ба Аяллын Галерей</h1>
+      </section>
+
+      <div
+        id="loader"
+        class="loader-container"
+        role="status"
+        aria-live="polite"
+      >
+        <div class="spinner"></div>
+        <p>Вебийг ачаалж байна...</p>
+      </div>
+
+      <div id="contentArea" class="content-area hidden">
+        <section id="gallery" aria-label="Зургийн галерей">
+          <h2 class="section-title">Зургийн Цомог</h2>
+          <div class="gallery-grid">
+            <article class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    class="gallery-image"
+                    src="img/photo1.jpg"
+                    alt="далайн эрэг"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h3>Далайн эрэг дээр нар жаргах</h3>
+                  <p class="meta-item">2026-05-14</p>
+                  <p class="meta-item">Далайн эрэг</p>
+                  <p class="meta-item">420 KB</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    class="gallery-image"
+                    src="img/photo2.jpg"
+                    alt="Байшин"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h3>Шинэ байшин</h3>
+                  <p class="meta-item">2026-09-28</p>
+                  <p class="meta-item">Зуслан</p>
+                  <p class="meta-item">380 KB</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="gallery-image" src="img/photo3.jpg" alt="Хөшөө" />
+                </div>
+                <div class="flip-card-back">
+                  <h3>Ханан хөшөө</h3>
+                  <p class="meta-item">2026-07-13</p>
+                  <p class="meta-item">Ойд</p>
+                  <p class="meta-item">510 KB</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    class="gallery-image"
+                    src="img/photo4.jpg"
+                    alt="Хадан арал"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h3>Хадан арал</h3>
+                  <p class="meta-item">2026-08-17</p>
+                  <p class="meta-item">Нуур</p>
+                  <p class="meta-item">290 KB</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    class="gallery-image"
+                    src="img/photo5.jpg"
+                    alt="Элсэн цөл"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h3>Элсэн цөл</h3>
+                  <p class="meta-item">2026-06-04</p>
+                  <p class="meta-item">Дундад Ази</p>
+                  <p class="meta-item">640 KB</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    class="gallery-image"
+                    src="img/photo6.jpg"
+                    alt="Сандал"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h3>Шинэ сандал</h3>
+                  <p class="meta-item">2026-08-25</p>
+                  <p class="meta-item">Гэрт</p>
+                  <p class="meta-item">310 KB</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="media" aria-label="Видео">
+          <h2 class="section-title">Видео</h2>
+          <div class="video-grid">
+            <div class="video-card">
+              <p class="video-label">Видео 1</p>
+              <video controls autoplay muted loop poster="img/poster1.jpg">
+                <source src="video/video1.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <div class="video-card">
+              <p class="video-label">Видео 2</p>
+              <video controls autoplay muted loop poster="img/poster2.jpg">
+                <source src="video/video2.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <div class="video-card">
+              <p class="video-label">Видео 3</p>
+              <video controls autoplay muted loop poster="img/poster3.jpg">
+                <source src="video/video3.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <p class="video-label">Байршил</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d171220.34664588948!2d106.73672171727128!3d47.891531698517035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96925be2b18aab%3A0xe606927864a1847f!2sUlaanbaatar!5e0!3m2!1sen!2smn!4v1792250400829!5m2!1sen!2smn"
+              class="map"
+              width="100%"
+              height="250"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen=""
+              title="Газрын зураг"
+              aria-label="Google Maps байршил"
+            ></iframe>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Зургийн Цомог Портал, Веб Дизайн Лаборатори 6</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const loader = document.getElementById("loader");
+        const contentArea = document.getElementById("contentArea");
+        const themeToggleBtn = document.getElementById("themeToggleBtn");
+        const themeText = document.getElementById("themeText");
+        const html = document.documentElement;
+
+        setTimeout(() => {
+          loader.style.display = "none";
+          contentArea.classList.remove("hidden");
+        }, 700);
+
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        let theme =
+          localStorage.getItem("theme") || (prefersDark ? "dark" : "light");
+
+        function applyTheme(t) {
+          html.setAttribute("data-theme", t);
+          themeText.textContent = t === "dark" ? "Light" : "Dark";
+          localStorage.setItem("theme", t);
+        }
+
+        applyTheme(theme);
+
+        themeToggleBtn.addEventListener("click", () => {
+          theme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          applyTheme(theme);
+        });
+      });
+    </script>
+  </body>
+</html>
