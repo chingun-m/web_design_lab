@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="mn" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Lab 7</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav-container" aria-label="Үндсэн навигаци">
+        <a href="#" class="logo-link" aria-label="Зургийн Цомог Нүүр хуудас">
+          <svg viewBox="0 0 36 36" width="36" height="36">
+            <rect x="3" y="3" width="30" height="30" rx="4" fill="#333333" />
+            <circle cx="24" cy="12" r="3" fill="#FFD166" />
+            <path d="M6 27 L14 16 L20 23 L24 19 L30 27 Z" fill="#228B22" />
+          </svg>
+          <span>Зургийн Цомог</span>
+        </a>
+        <div class="nav-actions">
+          <ul class="nav-links">
+            <li><a href="#gallery">Галерей</a></li>
+            <li><a href="#media">Видео</a></li>
+          </ul>
+          <button
+            id="themeToggleBtn"
+            class="theme-toggle-btn"
+            aria-label="Харанхуй горим шилжүүлэх"
+          >
+            <span id="themeText">Dark</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <h1 class="hero__title">Байгаль ба Аяллын Галерей</h1>
+      </section>
+
+      <div
+        id="loader"
+        class="loader__container"
+        role="status"
+        aria-live="polite"
+      >
+        <div class="loader__spinner"></div>
+        <p>Вебийг ачаалж байна...</p>
+      </div>
+
+      <div id="contentArea" class="content-area hidden">
+        <section id="gallery" aria-label="Зургийн галерей">
+          <h2 class="section__title">Зургийн Цомог</h2>
+          <div class="gallery__grid">
+            <article class="gallery__card" tabindex="0">
+              <div class="gallery__inner">
+                <div class="gallery__front">
+                  <img
+                    class="gallery__image"
+                    src="img/photo1.jpg"
+                    alt="далайн эрэг"
+                  />
+                </div>
+                <div class="gallery__back">
+                  <h3>Далайн эрэг дээр нар жаргах</h3>
+                  <p class="gallery__meta">2026-05-14</p>
+                  <p class="gallery__meta">Далайн эрэг</p>
+                  <p class="gallery__meta">420 KB</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery__card" tabindex="0">
+              <div class="gallery__inner">
+                <div class="gallery__front">
+                  <img
+                    class="gallery__image"
+                    src="img/photo2.jpg"
+                    alt="Байшин"
+                  />
+                </div>
+                <div class="gallery__back">
+                  <h3>Шинэ байшин</h3>
+                  <p class="gallery__meta">2026-09-28</p>
+                  <p class="gallery__meta">Зуслан</p>
+                  <p class="gallery__meta">380 KB</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery__card" tabindex="0">
+              <div class="gallery__inner">
+                <div class="gallery__front">
+                  <img
+                    class="gallery__image"
+                    src="img/photo3.jpg"
+                    alt="Хөшөө"
+                  />
+                </div>
+                <div class="gallery__back">
+                  <h3>Ханан хөшөө</h3>
+                  <p class="gallery__meta">2026-07-13</p>
+                  <p class="gallery__meta">Ойд</p>
+                  <p class="gallery__meta">510 KB</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery__card" tabindex="0">
+              <div class="gallery__inner">
+                <div class="gallery__front">
+                  <img
+                    class="gallery__image"
+                    src="img/photo4.jpg"
+                    alt="Хадан арал"
+                  />
+                </div>
+                <div class="gallery__back">
+                  <h3>Хадан арал</h3>
+                  <p class="gallery__meta">2026-08-17</p>
+                  <p class="gallery__meta">Нуур</p>
+                  <p class="gallery__meta">290 KB</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery__card" tabindex="0">
+              <div class="gallery__inner">
+                <div class="gallery__front">
+                  <img
+                    class="gallery__image"
+                    src="img/photo5.jpg"
+                    alt="Элсэн цөл"
+                  />
+                </div>
+                <div class="gallery__back">
+                  <h3>Элсэн цөл</h3>
+                  <p class="gallery__meta">2026-06-04</p>
+                  <p class="gallery__meta">Дундад Ази</p>
+                  <p class="gallery__meta">640 KB</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery__card" tabindex="0">
+              <div class="gallery__inner">
+                <div class="gallery__front">
+                  <img
+                    class="gallery__image"
+                    src="img/photo6.jpg"
+                    alt="Сандал"
+                  />
+                </div>
+                <div class="gallery__back">
+                  <h3>Шинэ сандал</h3>
+                  <p class="gallery__meta">2026-08-25</p>
+                  <p class="gallery__meta">Гэрт</p>
+                  <p class="gallery__meta">310 KB</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="media" aria-label="Видео">
+          <h2 class="section__title">Видео</h2>
+          <div class="video__grid">
+            <div class="video__card">
+              <p class="video__label">Видео 1</p>
+              <video
+                class="video__player"
+                controls
+                autoplay
+                muted
+                loop
+                poster="img/poster1.jpg"
+              >
+                <source src="video/video1.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <div class="video__card">
+              <p class="video__label">Видео 2</p>
+              <video
+                class="video__player"
+                controls
+                autoplay
+                muted
+                loop
+                poster="img/poster2.jpg"
+              >
+                <source src="video/video2.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <div class="video__card">
+              <p class="video__label">Видео 3</p>
+              <video
+                class="video__player"
+                controls
+                autoplay
+                muted
+                loop
+                poster="img/poster3.jpg"
+              >
+                <source src="video/video3.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+
+          <div class="video__card">
+            <p class="video__label">Байршил</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d171220.34664588948!2d106.73672171727128!3d47.891531698517035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96925be2b18aab%3A0xe606927864a1847f!2sUlaanbaatar!5e0!3m2!1sen!2smn!4v1792250400829!5m2!1sen!2smn"
+              class="map"
+              width="100%"
+              height="250"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen=""
+              title="Газрын зураг"
+              aria-label="Google Maps байршил"
+            ></iframe>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Зургийн Цомог Портал, Веб Дизайн Лаборатори 6</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+@use "sass:map";
+$colors: (
+  "bg-primary": #faf6f1,
+  "bg-surface": #fff8f2,
+  "bg-card-back": #2a1f17,
+  "text-primary": #1c1208,
+  "text-secondary": #7a6154,
+  "text-muted": #a08878,
+  "accent": #c8773a,
+  "accent-hover": #a85f2a,
+  "border": #e8ddd0,
+);
+
+$radii: (
+  "radius-sm": 8px,
+  "radius-md": 12px,
+  "radius-lg": 18px,
+);
+
+$breakpoints: (
+  "mobile": 600px,
+  "tablet": 768px,
+);
+
+$effects: (
+  "shadow-sm": (
+    0 2px 4px rgba(0, 0, 0, 0.05),
+  ),
+  "shadow-md": (
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05),
+  ),
+  "t-fast": 0.2s ease,
+  "t-normal": 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+  "flip-speed": 0.7s,
+  "stagger": 0.1s,
+);
+
+:root {
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+  }
+
+  @each $name, $value in $radii {
+    --#{$name}: #{$value};
+  }
+
+  @each $name, $value in $effects {
+    --#{$name}: #{$value};
+  }
+
+  --breakpoint-mobile: #{map.get($breakpoints, "mobile")};
+  --breakpoint-tablet: #{map.get($breakpoints, "tablet")};
+}
+[data-theme="dark"] {
+  --bg-primary: #0e0b09;
+  --bg-surface: #181512;
+  --bg-card-back: #0f0a07;
+  --text-primary: #f5ede3;
+  --text-secondary: #c4a898;
+  --text-muted: #6b5248;
+  --accent: #d9895a;
+  --accent-hover: #e89f72;
+  --border: #3a2e26;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}

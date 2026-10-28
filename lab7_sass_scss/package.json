@@ -1,0 +1,18 @@
+{
+  "name": "lab7_sass_scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:build": "sass --style=compressed scss/main.scss css/style.min.css",
+    "sass:watch": "sass --watch scss/main.scss:css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.106.1"
+  }
+}

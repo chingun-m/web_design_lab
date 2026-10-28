@@ -1,0 +1,26 @@
+@use "functions" as *;
+
+$spacing: (
+  "1": 0.25rem,
+  "2": 0.5rem,
+  "3": 1rem,
+  "4": 1.5rem,
+  "5": 2rem,
+);
+
+@each $name, $value in $spacing {
+  .mt-#{$name} {
+    margin-top: $value;
+  }
+
+  .mb-#{$name} {
+    margin-bottom: $value;
+  }
+
+  .p-#{$name} {
+    padding: $value;
+  }
+}
+.text-contrast-on-dark {
+  color: contrast(#0e0b09);
+}
